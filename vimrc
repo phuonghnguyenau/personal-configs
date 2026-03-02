@@ -1,4 +1,4 @@
-# Default vim configuration for servers
+" Default vim configuration for servers
 set nocompatible
 set number
  
