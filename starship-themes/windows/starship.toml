@@ -13,6 +13,8 @@ $os\
 $shell\
 [](fg:#659CD9 bg:#3960A7)\
 $directory\
+$python\
+$golang\
 [](fg:#3960A7 bg:#9C9C9C)\
 $git_branch\
 $git_commit\
@@ -23,16 +25,10 @@ $git_state\
 [](fg:#F2F2F2)\
 $character"""
 
-# disabled due to fill module
-# right_format = ''
 add_newline = true
-# command_timeout = 1000
 
 [line_break]
 disabled = true
-
-[fill]
-symbol = ' '
 
 [os]
 disabled = false
@@ -101,10 +97,10 @@ style = 'fg:#3376CD bold inverted'
 symbol = '󰠅 '
 
 [golang]
-disabled = true
-format = '[](fg:cyan)[$symbol($version )]($style)[](fg:cyan)'
-style = 'fg:cyan inverted'
+disabled = false
+format = '[$symbol($version )]($style))'
 symbol = ' '
+style = "fg:#F2F2F2 bg:#3960A7"
 
 [status]
 disabled = false
@@ -115,9 +111,13 @@ map_symbol = true
 
 [terraform]
 symbol = '󱁢 '
-#format = '[](fg:105)[$symbol$version( $workspace)]($style)[](fg:105)'
-format = '[](fg:105)[$symbol]($style)[](fg:105)'
-style = 'fg:105 inverted'
+format = '[$symbol]($style)'
+style = "fg:#F2F2F2 bg:#3960A7"
+
+[python]
+format = '[$symbol($version) ]($style)'
+symbol = " "
+style = "fg:#F2F2F2 bg:#3960A7"
 
 [hostname]
 disabled = true
@@ -243,9 +243,6 @@ disabled = true
 disabled = true
 
 [purescript]
-disabled = true
-
-[python]
 disabled = true
 
 [quarto]
