@@ -10,7 +10,6 @@
 format = """\
 [](fg:#659CD9)\
 $os\
-$sudo\
 $shell\
 [](fg:#659CD9 bg:#3960A7)\
 $directory\
@@ -22,11 +21,6 @@ $git_state\
 [](fg:#9C9C9C bg:#F2F2F2)\
 ($git_metrics)\
 [](fg:#F2F2F2)\
-$fill\
-$status\
-$all\
-$cmd_duration\
-$line_break\
 $character"""
 
 # disabled due to fill module
@@ -35,7 +29,7 @@ add_newline = true
 # command_timeout = 1000
 
 [line_break]
-disabled = false
+disabled = true
 
 [fill]
 symbol = ' '
@@ -48,18 +42,13 @@ style = 'fg:#659CD9 bg:#F2F2F2 inverted'
 [os.symbols]
 Macos = " "
 Windows = " "
-Ubuntu = " "
-
-[sudo]
-disabled = false
-symbol = "🧙"
-format = '[$symbol ]($style)'
-style = "bg:#C2B4DF"
+Linux = " "
 
 [shell]
 disabled = false
 zsh_indicator = ''
 powershell_indicator = ''
+bash_indicator = '󱆃'
 style = 'fg:#F2F2F2 bg:#659CD9'
 format = '[$indicator ]($style)'
 
@@ -96,8 +85,8 @@ style = "#5C7F6A inverted"
 
 [character]
 disabled = false
-success_symbol = '[❯](bold #F2F2F2) '
-error_symbol = '[❯](bold red) '
+success_symbol = ' [❯](bold #F2F2F2)'
+error_symbol = ' [❯](bold red)'
 
 [time]
 disabled = true
