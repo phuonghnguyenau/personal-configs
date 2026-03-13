@@ -38,5 +38,9 @@ symbol = 'py '
 
 [time]
 disabled = false
-style = "bold cyan"
+time_format = "%R" # Hour:Minute Format
+format = '[$time]($bold cyan) '
 
+[kubernetes]
+disabled = true
+format = '(| [$cluster]($bold yellow) in [$namespace]($bold yellow) )'
